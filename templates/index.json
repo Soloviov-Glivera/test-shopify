@@ -3,26 +3,24 @@
     "foto_section": {
       "type": "foto_section",
       "blocks": {
-    
+        "3b124739-d71f-4783-a204-c7980c630218": {
+          "type": "title",
+          "settings": {
+            "title": "Where imagination & creativity come to life"
+          }
+        },
+        "36c8b481-9518-4ef4-98e7-a34ba8c42812": {
+          "type": "descr",
+          "settings": {
+            "descr": "lorem ipsum AdAF ASDG AS DFJKG JADSFGHHA"
+          }
+        }
       },
       "block_order": [
-       
+        "3b124739-d71f-4783-a204-c7980c630218",
+        "36c8b481-9518-4ef4-98e7-a34ba8c42812"
       ],
       "settings": {
-        
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "multicolumn": {
@@ -77,11 +75,24 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "video": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-		"foto_section",
-		"multicolumn",
-		"video"
+    "foto_section",
+    "multicolumn",
+    "video"
   ]
 }
