@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="{{ 'foto_section.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'foto_section.css' | asset_url | stylesheet_tag }}</noscript>
+
+{% comment%}
+	{%- style -%}
+		.section-{{ section.id }}-padding {
+			padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+			padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+		}
+
+		@media screen and (min-width: 750px) {
+			.section-{{ section.id }}-padding {
+				padding-top: {{ section.settings.padding_top }}px;
+				padding-bottom: {{ section.settings.padding_bottom }}px;
+			}
+		}
+	{%- endstyle -%}
+{% endcomment%}
+
+	<div class="section_in"></div>
+		<div class="img_right_section__wrapper">
+			<div class="img_right_section__content">
+				{%- for block in section.blocks -%}
+        	{%- case block.type -%}
+	          {%- when 'title' -%}
+							<h2 class="img_right_section__title">
+								{{ block.settings.title | escape }}
+							</h2>
+						{%- when 'descr' -%}
+							<p class="img_right_section__descr">
+								{{ block.settings.descr | escape}}
+							</p>
+					{%- endcase -%}
+				{%- endfor -%}
+			</div>
+					<div class="img_right_section__photo">
+							<img class="img_right_section__img cover_img" src="{{ section.settings.image | img_url: "master" }}" alt="">
+					</div>
+				</div>
+
+{% schema %}
+{
+  "name": "Foto Section",
+  "tag": "section",
+  "class": "section",
+	"blocks": [
+		{
+			"type": "title",
+			"name": "title",
+			"limit": 1,
+			"settings": [
+				{
+					"type": "text",
+					"id": "title",
+					"default": "Where imagination & creativity come to life",
+					"label": "Title"
+				}
+			]
+		},
+		{
+			"type": "descr",
+			"name": "descr",
+			"limit": 1,
+			"settings": [
+				{
+					"type": "text",
+					"id": "descr",
+					"default": "lorem ipsum AdAF ASDG AS DFJKG JADSFGHHA",
+					"label": "Description"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Foto Section",
+			"blocks": [
+				{
+					"type": "title"
+				}
+			]
+		}
+	]	
+}
+{% endschema %}
